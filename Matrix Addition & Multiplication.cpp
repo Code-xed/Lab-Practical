@@ -9,9 +9,8 @@ class Matrix {
         Matrix(int r, int c) {
             row = r;
             col = c;
-            int *p = new int[row * col];
+            int *p = new int[row * col]; //A[y*rows + x]
             A = p;
-            //A[y*rows + x]
         }
         
         void getMatrix() {
