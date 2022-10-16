@@ -88,7 +88,6 @@ int main() {
         R = getOrder();
         row = R[0];
         col = R[1];
-        cout << "Row and col = " << row << col << endl;
         
         Matrix a(row, col);
         Matrix b(row, col);
