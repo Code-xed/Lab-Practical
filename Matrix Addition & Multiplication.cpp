@@ -11,7 +11,7 @@ class Matrix {
             col = c;
             int *p = new int[row * col];
             A = p;
-           // A[y*rows + x]
+            //A[y*rows + x]
         }
         
         void getMatrix() {
@@ -100,9 +100,9 @@ int main() {
         b.getMatrix();
         b.displayMatrix(2);
         
-         c = a.addMatrix(b);
-         cout << endl << "Sum of The above Matrices, M1 + M2 = M3";
-         c.displayMatrix(3);
+        c = a.addMatrix(b);
+        cout << endl << "Sum of The above Matrices, M1 + M2 = M3";
+        c.displayMatrix(3);
     }
     else if (option == 2) {
         cout << endl << "Matrix Multiplication\n\n";
