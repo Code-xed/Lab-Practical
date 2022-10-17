@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    float a, b, answer;
-    int option;
     string op;
+    int option;
+    float a, b, answer;
     cout << "Enter 2 Numbers: " << endl;
     cin >> a >> b;
     cout << "Which Arithematic Operation Do You Want To Do?\n";
@@ -33,8 +33,8 @@ int main() {
             answer = a * b;
             break;
         default:
-            op = " ! ";
-            answer = 0;
+            cout << "\t**Invalid Option**\n";
+            return 0;
             break;
     }
     
