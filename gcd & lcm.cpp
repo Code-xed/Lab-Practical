@@ -2,13 +2,26 @@
 
 using namespace std;
 
+void swap(int& a, int& b) {
+    a = a + b;
+    b = a - b;
+    a = a - b;
+}
+
 int gcd(int a, int b) {
-    int rem;
+    int rem; 
     if (b > a) {
-        a = a + b;
-        b = a - b;
-        a = a - b;
+        swap(a, b);
     }
+    //Recursive
+    if(b == 0) {
+        return a;
+    }
+    else {
+        return gcd(b, a % b);
+    }
+    /* 
+      * //Non-Recursive
     do {
         rem = a % b;
         a = b;
@@ -16,15 +29,12 @@ int gcd(int a, int b) {
     }
     while(rem);
     return a;
+    */
+    
 }
 
 int lcm(int a, int b) {
-    if (b > a) {
-        a = a + b;
-        b = a - b;
-        a = a - b;
-    }
-    return gcd(a, a % b);
+    return (a * b) / gcd(a, b);
 }
 
 int main() {
